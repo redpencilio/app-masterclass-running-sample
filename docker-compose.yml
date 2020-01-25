@@ -1,1 +1,8 @@
 version: '3.4'
+services:
+  identifier:
+    image: semtech/mu-identifier:1.7.0
+    ports:
+      - "80:80"
+    environment:
+      LOG_ALLOWED_GROUPS: "yes"
