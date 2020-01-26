@@ -1,0 +1,28 @@
+  @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+  @prefix schema: <http://schema.org/> .
+  @prefix authors: <http://books.com/authors/> .
+  @prefix books: <http://books.com/books/> .
+
+  authors:david a foaf:Person;
+      foaf:name "David Allen" .
+  books:gtd a schema:Book;
+      schema:name "Getting Things Done" ;
+      schema:creator authors:david .
+  books:ready a schema:Book ;
+      schema:name "Ready for Anything" ;
+      schema:creator authors:david .
+
+  authors:steven a foaf:Person ;
+      foaf:name "Steven Kotler" .
+  authors:peter a foaf:Person ;
+      foaf:name "Peter Diamandis" .
+  books:abundance a schema:Book ;
+      schema:name "Abundance" ;
+      schema:creator authors:steven,
+            authors:peter .
+
+  authors:daniel a foaf:Person;
+      foaf:name "Daniel Kahneman" .
+  books:fastAndSlow a schema:Book;
+      schema:name "Thinking Fast and Slow" ;
+      schema:creator authors:david .
