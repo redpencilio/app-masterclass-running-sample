@@ -1,0 +1,10 @@
+PREFIX schema: <http://schema.org/>
+INSERT {
+  GRAPH <http://mu.semte.ch/application> { ?author schema:author ?book. }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> { ?author schema:creator ?book. }
+}
+;
+DELETE WHERE {
+  GRAPH <http://mu.semte.ch/application> { ?author schema:creator ?book. }
+}
