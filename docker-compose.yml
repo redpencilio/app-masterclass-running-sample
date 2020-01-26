@@ -25,3 +25,9 @@ services:
     image: madnificent/books-service:2.0.0
     links:
       - virtuoso:database
+  migrations:
+    image: semtech/mu-migrations-service:0.5.0
+    links:
+      - virtuoso:database
+    volumes:
+      - ./config/migrations:/data/migrations
