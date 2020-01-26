@@ -21,3 +21,7 @@ services:
     - "8890:8890"
     volumes:
       - ./data/db:/data
+  books-service:
+    image: madnificent/books-service:2.0.0
+    links:
+      - virtuoso:database
