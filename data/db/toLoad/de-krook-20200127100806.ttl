@@ -1,0 +1,100 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@prefix mu:      <http://mu.semte.ch/vocabularies/core/>.
+<https://stad.gent/id/dekrook/works/100015>
+	rdf:type	<http://schema.org/Book> ;
+  mu:uuid "e68180ce-3b17-4d5b-abcd-6facb66c2aa6";
+	owl:sameAs	<http://www.worldcat.org/oclc/973480596> ;
+	<http://schema.org/datePublished>	"2015" ;
+	<http://schema.org/name>	"Bezonken rood";
+	<http://schema.org/productID>	"9789025445010";
+  <http://schema.org/author> <http://viaf.org/viaf/84492073>.
+<http://viaf.org/viaf/84492073>  <http://schema.org/birthDate> "1940-04-30";
+    mu:uuid "b478176e-6ccd-4531-8e78-14d515c5e8b3";
+    foaf:familyName "Brouwers";
+    foaf:givenName "Jeroen";
+    <http://schema.org/name> "Brouwers", "Brouwers, Jeroen";
+    owl:sameAs dbpedia:Jeroen_Brouwers;
+    a foaf:Person.
+<https://stad.gent/id/dekrook/works/100016>
+  mu:uuid "a09379c4-3c7d-4081-bcbc-df9208ef3545";
+	rdf:type	<http://schema.org/Book> ;
+	owl:sameAs	<http://www.worldcat.org/oclc/908261296> ;
+	<http://schema.org/datePublished>	"2015" ;
+	<http://schema.org/name>	"De zondvloed" ;
+	<http://schema.org/productID>	"9789025445027";
+  <http://schema.org/author> <http://viaf.org/viaf/84492073>.
+
+<https://stad.gent/id/dekrook/works/100017>
+  mu:uuid "a8395b83-bfb4-4b8f-8399-770b0161e569";
+	rdf:type	<http://schema.org/Book> ;
+	owl:sameAs	<http://www.worldcat.org/oclc/908261319> ;
+	<http://schema.org/datePublished>	"2015" ;
+	<http://schema.org/name>	"Winterlicht" ;
+	<http://schema.org/productID>	"9789025445003" ;
+  <http://schema.org/author> <http://viaf.org/viaf/84492073>.
+
+<https://stad.gent/id/dekrook/works/244511>
+  mu:uuid "a5ea453f-74af-4b12-a4fc-29d6eb6b20b0";
+	rdf:type	<http://schema.org/Book> ;
+	owl:sameAs	<http://www.worldcat.org/oclc/901400194> ;
+	<http://schema.org/datePublished>	"2015" ;
+	<http://schema.org/name>	"Dyslexie" ;
+	<http://schema.org/productID>	"9789053527191";
+  <http://schema.org/author> <http://viaf.org/viaf/11596856>.
+<http://viaf.org/viaf/11596856>
+    mu:uuid "0729a50e-ac1d-4b20-8763-e8362d99b61d";
+    <http://schema.org/birthDate> "1959";
+    foaf:familyName "Braams";
+    foaf:givenName "Tom";
+    <http://schema.org/name> "Braams, Tom";
+    a foaf:Person.
+
+<https://stad.gent/id/dekrook/works/101377>
+  mu:uuid "e115c5b1-2861-4723-a488-b66ac3956652";
+	rdf:type	<http://schema.org/Book> ;
+	owl:sameAs	<http://www.worldcat.org/oclc/907940438> ;
+	<http://schema.org/datePublished>	"2015" ;
+	<http://schema.org/name>	"Een brandbaar huwelijk" ;
+	<http://schema.org/productID>	"9789023491675" ;
+  <http://schema.org/author> <http://viaf.org/viaf/28604426>.
+
+<http://viaf.org/viaf/28604426>
+    mu:uuid "c6799b97-7264-4bac-8606-f11ea64afc0a";
+    <http://schema.org/birthDate> "1961-12-18";
+    foaf:familyName "Homes";
+    foaf:givenName "Amy Michael";
+    <http://schema.org/name>  "Homes, A. M";
+    owl:sameAs <http://dbpedia.org/resource/A._M._Homes>;
+    a foaf:Person.
+
+<https://stad.gent/id/dekrook/works/99153>
+  mu:uuid "b623c141-0fba-4f91-9dac-16ec90463e8d";
+	rdf:type	<http://schema.org/Book> ;
+	owl:sameAs	<http://www.worldcat.org/oclc/912020568> ;
+	<http://schema.org/datePublished>	"2015" ;
+	<http://schema.org/name>	"Floddertje";
+	<http://schema.org/productID> "9789045101125";
+  <http://schema.org/author> <http://viaf.org/viaf/21599>, <http://viaf.org/viaf/12540312>.
+
+<http://viaf.org/viaf/21599>
+    mu:uuid "2a3f00a5-1e99-4feb-bfef-eeccc1e1c296";
+    <http://schema.org/birthDate> "1911-05-20";
+    <http://schema.org/deathDate> "1995-05-21";
+    foaf:familyName "Schmidt";
+    foaf:givenName "Annie Maria Geertruida";
+    foaf:name "Schmidt, Annie M. G";
+    owl:sameAs <http://dbpedia.org/resource/Annie_M.G._Schmidt>;
+    a foaf:Person.
+<http://viaf.org/viaf/12540312>
+    mu:uuid "572317ef-aaa5-4ff7-b4c3-60ed538d862d";
+    <http://schema.org/birthDate> "1916-12-17";
+    <http://schema.org/deathDate> "2004-02-03";
+    foaf:familyName "Westendorp";
+    foaf:givenName "Fiep";
+    foaf:name "Westendorp, Fiep";
+    owl:sameAs dbpedia:Fiep_Westendorp;
+    a foaf:Person.
