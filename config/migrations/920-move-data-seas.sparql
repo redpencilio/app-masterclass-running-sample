@@ -1,0 +1,157 @@
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX session: <http://mu.semte.ch/vocabularies/session/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/authors> {
+    ?s a foaf:Person ;
+      ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:Person ;
+      ?p ?o .
+    ?book schema:author ?s .
+    VALUES ?p {
+      foaf:name
+      mu:uuid
+    }
+  }
+}
+
+;
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a ?type ;
+      ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a ?type ;
+      ?p ?o .
+    VALUES ?type {
+      schema:Book
+      schema:Library
+      schema:ItemAvailability
+    }
+  }
+}
+
+;
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/private> {
+    ?s a foaf:OnlineAccount ;
+      ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:OnlineAccount ;
+      ?p ?o .
+    VALUES ?p {
+      foaf:accountName
+      mu:uuid
+    }
+  }
+}
+
+;
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/private> {
+    ?x ?p ?s
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:OnlineAccount .
+    ?x ?p ?s .
+    VALUES ?p {
+      foaf:account
+      session:account
+    }
+  }
+}
+
+;
+
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/private> {
+    ?s a foaf:Person ;
+      ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:Person ;
+      ?p ?o .
+  }
+}
+
+;
+
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/private> {
+    ?x ?p ?s
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:Person .
+    ?x ?p ?s .
+    VALUES ?p {
+      foaf:member
+    }
+  }
+}
+
+;
+
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/management> {
+    ?s a foaf:Project ;
+      ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:Project ;
+      ?p ?o .
+  }
+}
+
+;
+
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/management> {
+    ?x ?p ?s .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a foaf:Project .
+    ?x ?p ?s .
+  }
+}
+
+;
+
+INSERT {
+  GRAPH ?g {
+    ?s a schema:Offer ;
+      ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/application> {
+    ?s a schema:Offer ;
+      schema:offeredBy ?library ;
+      ?p ?o .
+    ?library schema:name ?libraryName
+    BIND (IRI(CONCAT("http://mu.semte.ch/graphs/library/", ?libraryName)) as ?g)
+  }
+}
+
+
+
