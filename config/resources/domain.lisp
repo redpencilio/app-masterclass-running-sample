@@ -1,0 +1,41 @@
+(in-package :mu-cl-resources)
+
+(define-resource book ()
+  :class (s-prefix "schema:Book")
+  :properties `((:title :string ,(s-prefix "schema:name"))
+                (:isbn :string ,(s-prefix "schema:productID")))
+  :has-many `((author :via ,(s-prefix "schema:author")
+                      :as "authors")
+              (offer :via ,(s-prefix "schema:itemOffered")
+                     :inverse t
+                     :as "offers"))
+  :resource-base (s-url "http://books.com/books/")
+  :on-path "books")
+
+(define-resource author ()
+  :class (s-prefix "foaf:Person")
+  :properties `((:name :string ,(s-prefix "foaf:name")))
+  :has-many `((book :via ,(s-prefix "schema:author")
+                    :inverse t
+                    :as "books"))
+  :has-one `((project :via ,(s-prefix "foaf:currentProject")
+                      :as "project"))
+  :resource-base (s-url "http://books.com/authors/")
+  :on-path "authors")
+
+(define-resource project ()
+  :class (s-prefix "foaf:Project")
+  :properties `((:name :string ,(s-prefix "foaf:name")))
+  :has-many `((author :via ,(s-prefix "foaf:currentProject")
+                      :inverse t
+                      :as "authors"))
+  :resource-base (s-url "http://books.com/projects/")
+  :on-path "projects")
+
+(define-resource offer ()
+  :class (s-prefix "schema:Offer")
+  :properties `((:availability :url ,(s-prefix "schema:availability")))
+  :has-one `((book :via ,(s-prefix "schema:itemOffered")
+                   :as "book"))
+  :resource-base (s-url "http://books.com/offers/")
+  :on-path "offers")

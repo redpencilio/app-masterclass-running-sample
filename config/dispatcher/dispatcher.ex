@@ -5,11 +5,19 @@ defmodule Dispatcher do
   ]
 
   match "/books/*path", _ do
-    forward conn, path, "http://books-service/books/"
+    forward conn, path, "http://resource/books/"
   end
 
   match "/authors/*path", _ do
-    forward conn, path, "http://books-service/authors/"
+    forward conn, path, "http://resource/authors/"
+  end
+
+  match "/offers/*path", _ do
+    forward conn, path, "http://resource/offers/"
+  end
+
+  match "/projects/*path", _ do
+    forward conn, path, "http://resource/projects/"
   end
 
   match "/sessions/*path", %{ accept: %{ json: true } } do
