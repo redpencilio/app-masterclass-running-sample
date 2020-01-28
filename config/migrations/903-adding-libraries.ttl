@@ -1,0 +1,93 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@prefix mu:      <http://mu.semte.ch/vocabularies/core/>.
+@prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
+@prefix schema: <http://schema.org/> .
+@prefix authors: <http://books.com/authors/> .
+@prefix books: <http://books.com/books/> .
+
+# library
+ext:masterClassLibrary a schema:Library;
+  mu:uuid "9a115edf-40dc-40ae-90ae-b062821aa9c5";
+  schema:name "masterclass-library".
+
+ext:thePsychologyLibrary a schema:Library;
+  mu:uuid "e2d914cb-f811-44d3-8054-f6b88ea75385";
+  schema:name "the-psychology-library".
+
+
+# members and owners
+ext:janeRoe ext:ownerOfLibrary ext:masterClassLibrary.
+
+ext:johnDoe ext:memberOfLibrary ext:masterClassLibrary.
+
+<http://viaf.org/viaf/84492073> ext:memberOfLibrary ext:masterClassLibrary.
+
+<http://viaf.org/viaf/11596856> ext:memberOfLibrary ext:masterClassLibrary.
+
+authors:david ext:ownerOfLibrary ext:thePsychologyLibrary.
+
+authors:daniel ext:memberOfLibrary ext:thePsychologyLibrary.
+
+
+# offers
+ext:offer1 a schema:Offer;
+  mu:uuid "1df54bec-051e-4dd5-a611-33682eec16c2";
+  schema:itemOffered <https://stad.gent/id/dekrook/works/100015>;
+  schema:availibility <http://schema.org/InStock>.
+
+ext:offer2 a schema:Offer;
+  mu:uuid "cbc461a6-75d3-42e7-bcf1-52f6465cc43a";
+  schema:itemOffered <https://stad.gent/id/dekrook/works/100016>;
+  schema:availibility <http://schema.org/InStock> .
+
+ext:offer3 a schema:Offer;
+  mu:uuid "f5b517f8-6ac9-47d7-9a3a-707af2c3e3d1";
+  schema:itemOffered <https://stad.gent/id/dekrook/works/100017>;
+  schema:availibility <http://schema.org/InStock> .
+
+ext:offer4 a schema:Offer;
+  mu:uuid "69ceaa7b-2e50-4fab-a1f2-75b79c92d70d";
+  schema:itemOffered <https://stad.gent/id/dekrook/works/244511>;
+  schema:availibility <http://schema.org/InStock> .
+  
+ext:offer5 a schema:Offer;
+  mu:uuid "bcdaf2c3-5d20-4d25-9e0e-07cad403c049";
+  schema:itemOffered <https://stad.gent/id/dekrook/works/101377>;
+  schema:availibility <http://schema.org/InStock> .
+
+ext:offer6 a schema:Offer;
+  mu:uuid "0599d51f-0077-4c56-86a6-38bfa2ce2552";
+  schema:itemOffered <https://stad.gent/id/dekrook/works/99153>;
+  schema:availibility <http://schema.org/InStock> .
+
+ext:offer7 a schema:Offer;
+  mu:uuid "b6a56b7b-f6a1-41f0-8cbe-0167b1a10d3d";
+  schema:itemOffered books:gtd;
+  schema:availibility <http://schema.org/InStock> .
+
+ext:offer8 a schema:Offer;
+  mu:uuid "5962321d-c9ae-4909-8eef-35ed66132e7f";
+  schema:itemOffered books:abundance;
+  schema:availibility <http://schema.org/InStock> .
+
+ext:offer9 a schema:Offer;
+  mu:uuid "923af220-e074-40db-bf21-5071c0084adb";
+  schema:itemOffered books:fastAndSlow;
+  schema:availibility <http://schema.org/InStock> .
+
+
+# offers and libraries
+ext:offer1 schema:offeredBy ext:masterClassLibrary.
+ext:offer2 schema:offeredBy ext:masterClassLibrary.
+ext:offer3 schema:offeredBy ext:masterClassLibrary.
+ext:offer4 schema:offeredBy ext:masterClassLibrary.
+ext:offer5 schema:offeredBy ext:masterClassLibrary.
+
+ext:offer6 schema:offeredBy ext:thePsychologyLibrary.
+ext:offer7 schema:offeredBy ext:thePsychologyLibrary.
+ext:offer8 schema:offeredBy ext:thePsychologyLibrary.
+ext:offer9 schema:offeredBy ext:thePsychologyLibrary.

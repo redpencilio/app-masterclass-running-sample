@@ -1,0 +1,18 @@
+@prefix authors: <http://books.com/authors/> .
+@prefix projects: <http://books.com/projects/> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+projects:not-working a <http://xmlns.com/foaf/0.1/Project> ;
+    mu:uuid "df3f740c-813f-4364-b6b7-3053e87fe89f" ;
+    foaf:name "Not working" .
+
+projects:jip-en-janneke a <http://xmlns.com/foaf/0.1/Project> ;
+    mu:uuid "fa2a75b8-448a-49ac-b9eb-5ee386976d59";
+    foaf:name "Jip en Janneke" .
+
+authors:david foaf:currentProject projects:not-working .
+authors:daniel foaf:currentProject projects:not-working .
+
+<http://viaf.org/viaf/21599> foaf:currentProject projects:not-working .
+<http://viaf.org/viaf/12540312> foaf:currentProject projects:not-working .

@@ -1,0 +1,41 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
+@prefix authors: <http://books.com/authors/> .
+
+# accounts
+<http://viaf.org/viaf/84492073> foaf:account ext:jeroenBrouwersAccount .
+
+ext:jeroenBrouwersAccount a foaf:OnlineAccount;
+  foaf:accountName "Jeroentje";
+  mu:uuid "8f3cbd4c-ec47-4643-a706-7f37c1004a30" .
+
+<http://viaf.org/viaf/11596856> foaf:account ext:tomBraasAccount .
+
+ext:tomBraasAccount a foaf:OnlineAccount;
+  foaf:accountName "Ambras";
+  mu:uuid "5264ad54-1cd4-4dc5-8dbc-39ad680da769" .
+
+authors:david foaf:account ext:davidAllanAccount .
+
+ext:davidAllanAccount a foaf:OnlineAccount;
+  foaf:accountName "Dave";
+  mu:uuid "d7d39866-cb7d-41d6-8436-d5ede5116e04" .
+
+authors:daniel foaf:account ext:danielKahnemanAccount .
+
+ext:danielKahnemanAccount a foaf:OnlineAccount;
+  foaf:accountName "Daniel";
+  mu:uuid "4015bfe9-3797-4ce3-85e6-d415efb1dc85" .
+
+ext:janeRoe foaf:account ext:janeRoeAccount.
+
+ext:janeRoeAccount a foaf:OnlineAccount;
+  foaf:accountName "Jane Roe";
+  mu:uuid "6061ddad-6328-47dd-9991-204320505e8f".
+
+ext:johnDoe foaf:account ext:johnDoeAccount.
+
+ext:johnDoeAccount a foaf:OnlineAccount;
+  foaf:accountName "John Doe";
+  mu:uuid "651cb045-1638-4619-8386-e93c895cef4e".

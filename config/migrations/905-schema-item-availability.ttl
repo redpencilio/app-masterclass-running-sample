@@ -1,0 +1,38 @@
+﻿<http://schema.org/Discontinued> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "ddb3fb82-f1b9-4559-b94b-f2aa8863b872" ;
+    <http://schema.org/name> "Discontinued" .
+
+<http://schema.org/InStock> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "2d305410-4241-47c1-bd64-a5201e53591e" ;
+    <http://schema.org/name> "InStock" .
+
+<http://schema.org/InStoreOnly> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "faca0e71-0026-4c6f-9ab1-4c81cb431025" ;
+    <http://schema.org/name> "InStoreOnly" .
+
+<http://schema.org/LimitedAvailability> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "d4645e6f-c33f-4990-a6df-041b685c74c1" ;
+    <http://schema.org/name> "LimitedAvailability" .
+
+<http://schema.org/OnlineOnly> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "11590b5e-3ccc-4236-a0eb-08a90e06cd3c" ;
+    <http://schema.org/name> "OnlineOnly" .
+
+<http://schema.org/OutOfStock> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "3f3cf825-798c-4830-a724-5bee431f635a" ;
+    <http://schema.org/name> "OutOfStock" .
+
+<http://schema.org/PreOrder> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "3abfd3b3-6163-46d7-b1ee-5b53b9f6ac6a" ;
+    <http://schema.org/name> "PreOrder" .
+
+<http://schema.org/PreSale> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "cda31820-9aef-4c0e-a3aa-54265e6b54c5" ;
+    <http://schema.org/name> "PreSale" .
+
+<http://schema.org/SoldOut> a <http://schema.org/ItemAvailability> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "321d6003-471e-4daa-914a-bd0a04762245" ;
+    <http://schema.org/name> "SoldOut" .
+
+
+
