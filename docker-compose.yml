@@ -31,3 +31,7 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
+  mock-login:
+    image: cecemel/mu-mock-login-service:0.1.1
+    links:
+      - virtuoso:database
