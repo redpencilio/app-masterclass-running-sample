@@ -2,40 +2,55 @@
 @prefix mu: <http://mu.semte.ch/vocabularies/core/> .
 @prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
 @prefix authors: <http://books.com/authors/> .
+@prefix accounts: <http://books.com/accounts/> .
+@prefix persons: <http://books.com/persons/> .
 
 # accounts
-<http://viaf.org/viaf/84492073> foaf:account ext:jeroenBrouwersAccount .
+<http://viaf.org/viaf/84492073> foaf:account accounts:jeroen .
 
-ext:jeroenBrouwersAccount a foaf:OnlineAccount;
+accounts:jeroen a foaf:OnlineAccount;
   foaf:accountName "Jeroentje";
   mu:uuid "8f3cbd4c-ec47-4643-a706-7f37c1004a30" .
 
-<http://viaf.org/viaf/11596856> foaf:account ext:tomBraasAccount .
+<http://viaf.org/viaf/11596856> foaf:account accounts:tom .
 
-ext:tomBraasAccount a foaf:OnlineAccount;
+accounts:tom a foaf:OnlineAccount;
   foaf:accountName "Ambras";
   mu:uuid "5264ad54-1cd4-4dc5-8dbc-39ad680da769" .
 
-authors:david foaf:account ext:davidAllanAccount .
+authors:david foaf:account accounts:david .
 
-ext:davidAllanAccount a foaf:OnlineAccount;
+accounts:david a foaf:OnlineAccount;
   foaf:accountName "Dave";
   mu:uuid "d7d39866-cb7d-41d6-8436-d5ede5116e04" .
 
-authors:daniel foaf:account ext:danielKahnemanAccount .
+authors:daniel foaf:account accounts:daniel .
 
-ext:danielKahnemanAccount a foaf:OnlineAccount;
+accounts:daniel a foaf:OnlineAccount;
   foaf:accountName "Daniel";
   mu:uuid "4015bfe9-3797-4ce3-85e6-d415efb1dc85" .
 
-ext:janeRoe foaf:account ext:janeRoeAccount.
+persons:jane foaf:account accounts:jane.
 
-ext:janeRoeAccount a foaf:OnlineAccount;
+accounts:jane a foaf:OnlineAccount;
   foaf:accountName "Jane Roe";
   mu:uuid "6061ddad-6328-47dd-9991-204320505e8f".
 
-ext:johnDoe foaf:account ext:johnDoeAccount.
+persons:john foaf:account accounts:john.
 
-ext:johnDoeAccount a foaf:OnlineAccount;
+accounts:john a foaf:OnlineAccount;
   foaf:accountName "John Doe";
   mu:uuid "651cb045-1638-4619-8386-e93c895cef4e".
+
+
+<http://viaf.org/viaf/21599> foaf:account accounts:annie .
+<http://viaf.org/viaf/12540312> foaf:account accounts:fiep .
+
+accounts:annie a foaf:OnlineAccount;
+  foaf:accountName "Annie M. G Schmidt";
+    mu:uuid "74bb08f0-2062-441f-a3af-534b060c4769" .
+
+accounts:fiep a foaf:OnlineAccount;
+  foaf:accountName "Fiep Westendorp";
+    mu:uuid "d1dc5bf2-e8c2-41ef-b006-e6ba1ad4080c" .
+    

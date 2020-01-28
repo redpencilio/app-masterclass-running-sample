@@ -7,32 +7,32 @@
 @prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
 @prefix schema: <http://schema.org/> .
 @prefix authors: <http://books.com/authors/> .
+@prefix groups: <http://books.com/groups/> .
+@prefix persons: <http://books.com/persons/> .
 
-
-ext:janeRoe a foaf:Person;
+persons:jane a foaf:Person;
             a ext:LibraryOwner;
             foaf:name "Roe, Jane";
             foaf:familyName "Roe";
             foaf:givenName "Jane";
-            schema:birthDate: "1989";
+            schema:birthDate "1989";
             mu:uuid "2202b42b-4d58-48e2-b44c-50bfdbc28e4a".
 
-ext:johnDoe a foaf:Person;
+persons:john a foaf:Person;
             a ext:LibraryMember;
             foaf:name "Doe, John";
             foaf:familyName "Doe";
             foaf:givenName "John";
-            schema:birthDate: "1984";
+            schema:birthDate "1984";
             mu:uuid "fe610574-5f10-4533-aa44-98ef2fb10f11".
 
-<http://viaf.org/viaf/84492073> a ext:LibraryMember.
-<http://viaf.org/viaf/11596856> a ext:LibraryMember.
 authors:david a ext:LibraryOwner.
 authors:daniel a ext:LibraryMember.
 
 
 # groups
-ext:curatorGroup1 a foaf:Group;
-  mu:uuid "53815203-b353-4d5e-940c-fefe06b5ae31";
-  foaf:member: ext:janeRoe;
-  foaf:member: authors:david.
+groups:curators a foaf:Group;
+    mu:uuid "53815203-b353-4d5e-940c-fefe06b5ae31";
+    foaf:name "Curators" ;
+    foaf:member persons:jane;
+    foaf:member authors:david.
